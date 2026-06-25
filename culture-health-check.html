@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Culture Health Check | Thrive People HR</title>
+  <meta name="description" content="Five questions. Five minutes. Find out exactly where your people infrastructure needs attention — before your first conversation with Thrive.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="assets/thrive-logo.png" alt="Thrive People HR"></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="what-we-do.html">What We Do</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="how-we-work.html">How We Work</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="work-with-us.html" class="nav-cta">Work With Us</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<section style="background:var(--cream); padding:4rem 0;">
+  <div class="container">
+    <div class="quiz-wrap">
+      <p class="eyebrow">Free · 5 Questions · 5 Minutes</p>
+      <h1 style="font-size:2rem; margin-bottom:0.75rem;">Culture Health Check</h1>
+      <p style="margin-bottom:2.5rem;">Find out exactly where your people infrastructure stands — and what it might be costing you. Your results are personalized and delivered immediately.</p>
+
+      <div class="quiz-progress">
+        <div class="quiz-progress-bar" id="progressBar" style="width:0%"></div>
+      </div>
+
+      <!-- Q1 -->
+      <div class="quiz-step active" id="step1" data-q="1">
+        <p class="quiz-q">How does your company currently handle performance conversations with employees?</p>
+        <div class="quiz-options">
+          <button class="quiz-option" data-val="A" onclick="selectOption(this)">
+            <span class="quiz-option-key">A</span>
+            We have a formal review process with clear goals and regular check-ins
+          </button>
+          <button class="quiz-option" data-val="B" onclick="selectOption(this)">
+            <span class="quiz-option-key">B</span>
+            We do annual reviews but they're inconsistent across managers
+          </button>
+          <button class="quiz-option" data-val="C" onclick="selectOption(this)">
+            <span class="quiz-option-key">C</span>
+            Performance conversations happen when there's a problem
+          </button>
+          <button class="quiz-option" data-val="D" onclick="selectOption(this)">
+            <span class="quiz-option-key">D</span>
+            We don't have a formal process yet
+          </button>
+        </div>
+        <div class="quiz-nav">
+          <span class="quiz-counter">Question 1 of 5</span>
+          <button class="btn btn-primary" onclick="nextStep(1)" id="next1" disabled>Next →</button>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="quiz-step" id="step2" data-q="2">
+        <p class="quiz-q">When someone gets promoted into a people manager role at your company, what happens next?</p>
+        <div class="quiz-options">
+          <button class="quiz-option" data-val="A" onclick="selectOption(this)">
+            <span class="quiz-option-key">A</span>
+            They go through a structured onboarding program designed for new managers
+          </button>
+          <button class="quiz-option" data-val="B" onclick="selectOption(this)">
+            <span class="quiz-option-key">B</span>
+            We pair them with a senior leader for some informal mentoring
+          </button>
+          <button class="quiz-option" data-val="C" onclick="selectOption(this)">
+            <span class="quiz-option-key">C</span>
+            We trust them to figure it out — they were great individual contributors
+          </button>
+          <button class="quiz-option" data-val="D" onclick="selectOption(this)">
+            <span class="quiz-option-key">D</span>
+            We haven't had to address this yet but it's coming
+          </button>
+        </div>
+        <div class="quiz-nav">
+          <button class="btn btn-secondary" onclick="prevStep(2)">← Back</button>
+          <span class="quiz-counter">Question 2 of 5</span>
+          <button class="btn btn-primary" onclick="nextStep(2)" id="next2" disabled>Next →</button>
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="quiz-step" id="step3" data-q="3">
+        <p class="quiz-q">How would you describe your employee onboarding experience?</p>
+        <div class="quiz-options">
+          <button class="quiz-option" data-val="A" onclick="selectOption(this)">
+            <span class="quiz-option-key">A</span>
+            Structured, role-specific, and connected to our culture from Day 1
+          </button>
+          <button class="quiz-option" data-val="B" onclick="selectOption(this)">
+            <span class="quiz-option-key">B</span>
+            We cover the basics — paperwork, systems access, team intro
+          </button>
+          <button class="quiz-option" data-val="C" onclick="selectOption(this)">
+            <span class="quiz-option-key">C</span>
+            It varies a lot depending on who's doing the hiring
+          </button>
+          <button class="quiz-option" data-val="D" onclick="selectOption(this)">
+            <span class="quiz-option-key">D</span>
+            Honestly, people learn by doing here
+          </button>
+        </div>
+        <div class="quiz-nav">
+          <button class="btn btn-secondary" onclick="prevStep(3)">← Back</button>
+          <span class="quiz-counter">Question 3 of 5</span>
+          <button class="btn btn-primary" onclick="nextStep(3)" id="next3" disabled>Next →</button>
+        </div>
+      </div>
+
+      <!-- Q4 -->
+      <div class="quiz-step" id="step4" data-q="4">
+        <p class="quiz-q">How would you describe your company's approach to culture as you've grown?</p>
+        <div class="quiz-options">
+          <button class="quiz-option" data-val="A" onclick="selectOption(this)">
+            <span class="quiz-option-key">A</span>
+            We've documented our values and actively reinforce them through our people practices
+          </button>
+          <button class="quiz-option" data-val="B" onclick="selectOption(this)">
+            <span class="quiz-option-key">B</span>
+            We talk about culture a lot but haven't formalized it yet
+          </button>
+          <button class="quiz-option" data-val="C" onclick="selectOption(this)">
+            <span class="quiz-option-key">C</span>
+            Culture was strong when we were small — we're not sure it's survived the growth
+          </button>
+          <button class="quiz-option" data-val="D" onclick="selectOption(this)">
+            <span class="quiz-option-key">D</span>
+            Culture is something we want to focus on — we just haven't had time
+          </button>
+        </div>
+        <div class="quiz-nav">
+          <button class="btn btn-secondary" onclick="prevStep(4)">← Back</button>
+          <span class="quiz-counter">Question 4 of 5</span>
+          <button class="btn btn-primary" onclick="nextStep(4)" id="next4" disabled>Next →</button>
+        </div>
+      </div>
+
+      <!-- Q5 -->
+      <div class="quiz-step" id="step5" data-q="5">
+        <p class="quiz-q">How much of your week (as a founder or senior leader) is currently spent on HR-related decisions and situations?</p>
+        <div class="quiz-options">
+          <button class="quiz-option" data-val="A" onclick="selectOption(this)">
+            <span class="quiz-option-key">A</span>
+            Less than 5% — we have systems and people handling it
+          </button>
+          <button class="quiz-option" data-val="B" onclick="selectOption(this)">
+            <span class="quiz-option-key">B</span>
+            10–20% — manageable but growing
+          </button>
+          <button class="quiz-option" data-val="C" onclick="selectOption(this)">
+            <span class="quiz-option-key">C</span>
+            25–40% — it's pulling me away from the business
+          </button>
+          <button class="quiz-option" data-val="D" onclick="selectOption(this)">
+            <span class="quiz-option-key">D</span>
+            More than that — HR is consuming my leadership bandwidth
+          </button>
+        </div>
+        <div class="quiz-nav">
+          <button class="btn btn-secondary" onclick="prevStep(5)">← Back</button>
+          <span class="quiz-counter">Question 5 of 5</span>
+          <button class="btn btn-primary" onclick="nextStep(5)" id="next5" disabled>See My Results →</button>
+        </div>
+      </div>
+
+      <!-- EMAIL CAPTURE -->
+      <div class="quiz-step" id="stepCapture">
+        <h2 style="font-size:1.5rem; margin-bottom:0.5rem;">Your results are ready.</h2>
+        <p style="margin-bottom:2rem;">Enter your details below to receive your personalized Culture Health Check results — including where to focus first and what it might be costing you to wait.</p>
+        <div class="capture-form">
+          <input type="text" id="captureFirstName" placeholder="First name" required>
+          <input type="text" id="captureLastName" placeholder="Last name" required>
+          <input type="email" id="captureEmail" placeholder="Work email" required>
+          <input type="text" id="captureCompany" placeholder="Company name" required>
+          <select id="captureCompanySize" required style="width:100%; padding:0.75rem 1rem; border:1px solid #d0d5dd; border-radius:var(--radius); font-size:1rem; color:var(--ink); background:white; appearance:none; -webkit-appearance:none; background-image:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%228%22 viewBox=%220 0 12 8%22><path fill=%22%232d6a6a%22 d=%22M6 8L0 0h12z%22/></svg>'); background-repeat:no-repeat; background-position:right 1rem center;">
+            <option value="" disabled selected>Company size</option>
+            <option value="Under 30">Under 30 employees</option>
+            <option value="30-75">30–75 employees</option>
+            <option value="75-150">75–150 employees</option>
+            <option value="150+">150+ employees</option>
+          </select>
+          <button class="btn btn-primary" onclick="submitAndShowResults()" style="width:100%;">See My Results →</button>
+          <p style="font-size:0.78rem; color:var(--ink-light);">No spam — ever. Your information is used only to send your results and follow up if it's a fit.</p>
+        </div>
+      </div>
+
+      <!-- RESULTS -->
+      <div class="quiz-step" id="stepResults">
+        <div class="result-card" id="resultCard"></div>
+        <div style="margin-top:2rem; display:flex; gap:1rem; flex-wrap:wrap;">
+          <a href="https://meetings-na2.hubspot.com/damary-checo-brillant" target="_blank" class="btn btn-primary">Schedule a Conversation</a>
+          <a href="services.html" class="btn btn-secondary">See All Services</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="footer-logo"><img src="assets/thrive-logo.png" alt="Thrive People HR"></div><p>Fractional HR leadership for companies at 30–150 employees.</p></div>
+      <div class="footer-col"><h4>Navigate</h4><ul><li><a href="what-we-do.html">What We Do</a></li><li><a href="services.html">Services</a></li><li><a href="how-we-work.html">How We Work</a></li><li><a href="about.html">About</a></li></ul></div>
+      <div class="footer-col"><h4>Resources</h4><ul><li><a href="culture-health-check.html">Culture Health Check</a></li><li><a href="resources.html">Insights & Blog</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="work-with-us.html">Contact Us</a></li><li><a href="https://linkedin.com/in/damarybrillant" target="_blank" rel="noopener">LinkedIn</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Thrive People HR · Imoye Consulting LLC · New York</p>
+      <a href="https://linkedin.com/in/damarybrillant" target="_blank" rel="noopener" class="footer-linkedin"><i class="ti ti-brand-linkedin"></i> LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<!-- HubSpot Forms Script -->
+<script charset="utf-8" type="text/javascript" src="//js-na2.hsforms.net/forms/embed/v2.js"></script>
+
+<script>
+const toggle = document.getElementById('navToggle');
+const links  = document.getElementById('navLinks');
+toggle.addEventListener('click', () => links.classList.toggle('open'));
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+
+const answers = {};
+const total = 5;
+
+// Question labels for HubSpot field values
+const questionLabels = {
+  1: 'Performance Management',
+  2: 'Manager Readiness',
+  3: 'Onboarding',
+  4: 'Culture Intentionality',
+  5: 'HR Bandwidth'
+};
+
+const answerLabels = {
+  1: {
+    A: 'Formal process with clear goals and regular check-ins',
+    B: 'Annual reviews, inconsistent across managers',
+    C: 'Performance conversations happen when there is a problem',
+    D: 'No formal process yet'
+  },
+  2: {
+    A: 'Structured onboarding program for new managers',
+    B: 'Informal mentoring with a senior leader',
+    C: 'Trust them to figure it out',
+    D: 'Have not had to address this yet'
+  },
+  3: {
+    A: 'Structured, role-specific, connected to culture from Day 1',
+    B: 'Cover the basics — paperwork, systems, team intro',
+    C: 'Varies depending on who is doing the hiring',
+    D: 'People learn by doing'
+  },
+  4: {
+    A: 'Documented values, actively reinforced through people practices',
+    B: 'Talk about culture but have not formalized it',
+    C: 'Culture was strong when small — not sure it survived growth',
+    D: 'Want to focus on culture but have not had time'
+  },
+  5: {
+    A: 'Less than 5% — systems and people handling it',
+    B: '5–15% — manageable but present',
+    C: '15–30% — significant time drain',
+    D: 'More than 30% — consuming leadership bandwidth'
+  }
+};
+
+function selectOption(btn) {
+  const step = btn.closest('.quiz-step');
+  step.querySelectorAll('.quiz-option').forEach(o => o.classList.remove('selected'));
+  btn.classList.add('selected');
+  const q = step.dataset.q;
+  answers[q] = btn.dataset.val;
+  const nextBtn = step.querySelector('[id^="next"]');
+  if (nextBtn) nextBtn.disabled = false;
+}
+
+function nextStep(current) {
+  if (!answers[current]) return;
+  document.getElementById('step' + current).classList.remove('active');
+  const progress = (current / total) * 100;
+  document.getElementById('progressBar').style.width = progress + '%';
+  if (current === total) {
+    document.getElementById('stepCapture').classList.add('active');
+    document.getElementById('progressBar').style.width = '100%';
+  } else {
+    document.getElementById('step' + (current + 1)).classList.add('active');
+  }
+}
+
+function prevStep(current) {
+  document.getElementById('step' + current).classList.remove('active');
+  document.getElementById('step' + (current - 1)).classList.add('active');
+  const progress = ((current - 2) / total) * 100;
+  document.getElementById('progressBar').style.width = Math.max(0, progress) + '%';
+}
+
+const results = {
+  A: {
+    title: "You're Building Well",
+    color: '#2A6B5E',
+    bg: '#E8F4F1',
+    body: "Your people infrastructure is more developed than most companies at your stage. The opportunity now is to connect your HR systems to your growth strategy — succession planning, leadership pipeline, and culture measurement as you scale.",
+    tier: "A Thrive Advise or Edge engagement may be the right fit — senior judgment applied to the decisions that matter most.",
+    cta: "Thrive Edge"
+  },
+  B: {
+    title: "Gaps Are Opening",
+    color: '#185FA5',
+    bg: '#E6F1FB',
+    body: "You've built the basics, but inconsistency is becoming your biggest risk. Managers are operating differently, onboarding quality varies, and culture is starting to depend on individuals rather than systems.",
+    tier: "A Thrive Build engagement closes the most critical gaps — one complete system, handed over with metrics.",
+    cta: "Thrive Build"
+  },
+  C: {
+    title: "The Cracks Are Showing",
+    color: '#993C1D',
+    bg: '#FAECE7',
+    body: "Growth has outpaced your people infrastructure. Performance conversations are reactive, onboarding is improvised, and culture is more hope than design. The longer this continues, the more expensive the fix becomes.",
+    tier: "A Thrive Build engagement will stabilize the people function and build the foundation — before the issues compound.",
+    cta: "Thrive Build"
+  },
+  D: {
+    title: "Ready to Build From Scratch — and That's a Good Thing",
+    color: '#854F0B',
+    bg: '#FAEEDA',
+    body: "You're at the moment that defines what kind of company you become. The decisions made in the next 12 months about culture, systems, and leadership will set the tone for the next 100 people you hire.",
+    tier: "A Thrive Clarity engagement gives you the roadmap. Thrive Build turns it into infrastructure.",
+    cta: "Thrive Clarity"
+  }
+};
+
+function submitAndShowResults() {
+  // Validate required fields
+  const firstName = document.getElementById('captureFirstName').value.trim();
+  const lastName  = document.getElementById('captureLastName').value.trim();
+  const email     = document.getElementById('captureEmail').value.trim();
+  const company   = document.getElementById('captureCompany').value.trim();
+  const size      = document.getElementById('captureCompanySize').value;
+
+  if (!firstName || !lastName || !email || !company || !size) {
+    alert('Please fill in all fields to see your results.');
+    return;
+  }
+
+  // Build HubSpot fields array with visible + hidden quiz answer fields
+  const fields = [
+    { name: 'firstname',            value: firstName },
+    { name: 'lastname',             value: lastName },
+    { name: 'email',                value: email },
+    { name: 'company',              value: company },
+    { name: 'company_size',         value: size },
+    { name: 'chc_performance_management', value: answerLabels[1][answers[1]] || '' },
+    { name: 'chc_manager_readiness',      value: answerLabels[2][answers[2]] || '' },
+    { name: 'chc_onboarding',             value: answerLabels[3][answers[3]] || '' },
+    { name: 'chc_culture_intentionality', value: answerLabels[4][answers[4]] || '' },
+    { name: 'chc_hr_bandwidth',           value: answerLabels[5][answers[5]] || '' }
+  ];
+
+  // Submit to HubSpot Forms API
+  const portalId = '246599954';
+  const formId   = 'dd0a8ea8-db09-42bd-87ec-d172fa38fb79';
+
+  fetch(`https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formId}`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      fields: fields,
+      context: { pageUri: window.location.href, pageName: 'Culture Health Check' }
+    })
+  }).catch(err => console.warn('HubSpot submission error:', err));
+  // Note: we proceed to show results regardless of submission success
+  // so a network issue never blocks the user from seeing their results
+
+  // Show results
+  showResults(firstName);
+}
+
+function showResults(firstName) {
+  const name = firstName || 'there';
+  const vals = Object.values(answers);
+  const counts = { A: 0, B: 0, C: 0, D: 0 };
+  vals.forEach(v => counts[v]++);
+  const top = Object.entries(counts).sort((a,b) => b[1]-a[1])[0][0];
+  const r = results[top];
+
+  document.getElementById('stepCapture').classList.remove('active');
+  document.getElementById('stepResults').classList.add('active');
+  document.getElementById('progressBar').style.width = '100%';
+
+  document.getElementById('resultCard').innerHTML = `
+    <div style="background:${r.bg}; border-radius:var(--radius); padding:0.5rem 1rem; display:inline-block; margin-bottom:1.25rem;">
+      <span style="font-size:0.75rem; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:${r.color};">Your Result</span>
+    </div>
+    <h3 style="color:${r.color}; font-size:1.6rem; margin-bottom:0.75rem;">${r.title}</h3>
+    <p style="margin-bottom:1rem;">${r.body}</p>
+    <div style="background:${r.bg}; border-left:3px solid ${r.color}; padding:0.75rem 1rem; border-radius:0 var(--radius) var(--radius) 0; margin-bottom:1.25rem;">
+      <p style="font-size:0.9rem; font-weight:500; color:${r.color}; margin:0;">${r.tier}</p>
+    </div>
+    <p style="font-size:0.85rem; color:var(--ink-light);">Results have been sent to your email. A member of the Thrive team will follow up with personalized recommendations based on your answers.</p>
+  `;
+}
+</script>
+</body>
+</html>
