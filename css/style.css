@@ -44,7 +44,7 @@ p  { color: var(--ink-mid); line-height: 1.75; }
 /* NAV */
 .nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); padding: 0 2rem; }
 .nav-inner { max-width: var(--max-w); margin: 0 auto; height: 96px; display: flex; align-items: center; justify-content: space-between; }
-.nav-logo img { height: 64px; width: auto; }
+.nav-logo img { height: 80px; width: auto; }
 .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
 .nav-links a { font-size: 0.88rem; font-weight: 500; color: var(--ink-mid); transition: color 0.2s; }
 .nav-links a:hover { color: var(--teal); }
