@@ -223,7 +223,7 @@
         <li><a href="about.html">About</a></li>
       </ul></div>
       <div class="footer-col"><h4>Resources</h4><ul>
-        <li><a href="culture-health-check.html" style="color:var(--teal);">Culture Health Check</a></li>
+        <li><a href="culture-health-check.html">Culture Health Check</a></li>
         <li><a href="resources.html">Insights &amp; Blog</a></li>
       </ul></div>
       <div class="footer-col"><h4>Connect</h4><ul>
@@ -324,7 +324,7 @@ const results = {
     color: '#2A6B5E',
     bg: '#E8F4F1',
     body: "Your people infrastructure is more developed than most companies at your stage. The opportunity now is to connect your HR systems to your growth strategy — succession planning, leadership pipeline, and culture measurement as you scale.",
-    tier: "A Thrive Advise or Edge engagement may be the right fit — senior judgment applied to the decisions that matter most.",
+    tier: "A Thrive Edge engagement may be the right fit — senior judgment applied to the decisions that matter most.",
     cta: "Thrive Edge"
   },
   B: {
@@ -404,7 +404,12 @@ function showResults(firstName) {
   const vals = Object.values(answers);
   const counts = { A: 0, B: 0, C: 0, D: 0 };
   vals.forEach(v => counts[v]++);
-  const top = Object.entries(counts).sort((a,b) => b[1]-a[1])[0][0];
+  // Tiebreaker: on equal counts, favor the worse score (D > C > B > A)
+  // so the result leans toward recommending more support, not less.
+  const order = { A: 0, B: 1, C: 2, D: 3 };
+  const top = Object.entries(counts).sort((a, b) =>
+    b[1] !== a[1] ? b[1] - a[1] : order[b[0]] - order[a[0]]
+  )[0][0];
   const r = results[top];
 
   document.getElementById('stepCapture').classList.remove('active');
@@ -420,7 +425,7 @@ function showResults(firstName) {
     <div style="background:${r.bg}; border-left:3px solid ${r.color}; padding:0.75rem 1rem; border-radius:0 var(--radius) var(--radius) 0; margin-bottom:1.25rem;">
       <p style="font-size:0.9rem; font-weight:500; color:${r.color}; margin:0;">${r.tier}</p>
     </div>
-    <p style="font-size:0.85rem; color:var(--ink-light);">Results have been sent to your email. A member of the Thrive team will follow up with personalized recommendations based on your answers.</p>
+    <p style="font-size:0.85rem; color:var(--ink-light);">Save or screenshot this page for your records. A member of the Thrive team will be in touch with personalized recommendations based on your answers.</p>
   `;
 }
 </script>
