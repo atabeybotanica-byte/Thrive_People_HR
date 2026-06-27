@@ -7,11 +7,31 @@
   <meta name="description" content="Thrive Clarity, Build, and Edge. Senior HR leadership for growing companies, brought in at exactly the right depth.">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <style>
+    .tiers-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      align-items: stretch;
+    }
+    .tier-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .tier-includes {
+      flex: 1;
+    }
+    .tier-cta-wrap {
+      margin-top: auto;
+      padding-top: 1.5rem;
+    }
+  </style>
 </head>
 <body>
 <nav class="nav">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo"><img src="assets/thrive-logo.png" alt="Thrive People HR — People. Purpose. Performance."></a>
+    <a href="index.html" class="nav-logo"><img src="assets/thrive-logo-header.png" alt="Thrive People HR — People. Purpose. Performance."></a>
     <ul class="nav-links" id="navLinks">
       <li><a href="what-we-do.html">Built to Win</a></li>
       <li><a href="services.html">Start Building</a></li>
@@ -26,18 +46,18 @@
 
 <section style="background:var(--cream); padding:5rem 0 3rem;">
   <div class="container">
-    <h1 style="max-width:20ch;">The right player.<br>The right position.<br>Right when the team needs it.</h1>
-    <p style="max-width:58ch; margin-top:1.25rem; font-size:1.05rem;">The decisions you're making right now will define the next chapter of your company. Onboarding, performance, culture. Most founders are navigating these without a senior HR voice in the room. Thrive changes that. VP-level people strategy, brought in at exactly the depth you need, without the full-time executive overhead.</p>
+    <h1 style="max-width:20ch;">The right player. The right position. Right when the team needs it.</h1>
+    <p style="max-width:58ch; margin-top:1.25rem; font-size:1.05rem;">The decisions you're making right now will define the next chapter of your company.<br>Compensation, performance, culture, succession. Most founders are navigating these without a senior HR voice in the room. Thrive changes that. VP-level people strategy, brought in at exactly the depth you need, without the full-time executive overhead.</p>
     <p style="max-width:58ch; margin-top:0.75rem; font-size:0.9rem; color:var(--ink-light);">Every proposal is scoped to where you are on the field. Pricing is proposal-based.</p>
   </div>
 </section>
 
 <section style="background:var(--white); padding:4rem 0;">
   <div class="container">
-    <div class="tiers-grid" style="align-items:start;">
+    <div class="tiers-grid">
 
       <!-- CLARITY -->
-      <div class="tier-card" style="display:flex; flex-direction:column;">
+      <div class="tier-card">
         <p class="tier-label clarity">Thrive Clarity</p>
         <h3>Know where you stand.</h3>
         <p class="tier-tagline">Assess the field. Surface the gaps. Get the playbook.</p>
@@ -45,7 +65,7 @@
           <strong>Best for</strong>
           You're moving fast and you need to know what's missing before something breaks. Thrive assesses your people infrastructure, surfaces risk, and hands you a clear picture of where to focus first.
         </div>
-        <ul class="tier-includes" style="flex:1;">
+        <ul class="tier-includes">
           <li>HR policy and documentation audit</li>
           <li>Handbook review or first-draft handbook</li>
           <li>People process gap assessment</li>
@@ -57,11 +77,13 @@
           <strong>Scorecard</strong>
           Baseline captured at assessment. The starting line for everything that follows.
         </div>
-        <a href="work-with-us.html" class="btn btn-secondary" style="width:100%; text-align:center; margin-top:auto;">Request a Clarity Proposal</a>
+        <div class="tier-cta-wrap">
+          <a href="work-with-us.html" class="btn btn-secondary" style="width:100%; text-align:center;">Request a Clarity Proposal</a>
+        </div>
       </div>
 
       <!-- BUILD -->
-      <div class="tier-card featured" style="display:flex; flex-direction:column;">
+      <div class="tier-card featured">
         <span class="tier-badge">Most Common</span>
         <p class="tier-label build">Thrive Build</p>
         <h3>Build the system.</h3>
@@ -70,11 +92,9 @@
           <strong>Best for</strong>
           You know what needs to be built. Thrive designs and implements one complete people system, then hands it to a named internal owner with training and a metrics dashboard so your team can run it without us.
         </div>
-        <ul class="tier-includes" style="flex:1;">
+        <ul class="tier-includes">
           <li>Full system design and implementation</li>
           <li>Manager or team training on the system</li>
-          <li>Handover to a named internal owner</li>
-          <li>Metrics dashboard built in from Day 1</li>
           <li>90-day post-launch check-in included</li>
         </ul>
         <p class="tier-timeline"><i class="ti ti-clock" style="vertical-align:-2px;"></i> Timeline: 6-14 weeks depending on scope</p>
@@ -82,11 +102,13 @@
           <strong>Scorecard</strong>
           Before and after. 90-day post-launch measurement against baseline.
         </div>
-        <a href="work-with-us.html" class="btn btn-primary" style="width:100%; text-align:center; margin-top:auto;">Request a Build Proposal</a>
+        <div class="tier-cta-wrap">
+          <a href="work-with-us.html" class="btn btn-primary" style="width:100%; text-align:center;">Request a Build Proposal</a>
+        </div>
       </div>
 
       <!-- EDGE -->
-      <div class="tier-card" style="display:flex; flex-direction:column;">
+      <div class="tier-card">
         <p class="tier-label edge">Thrive Edge</p>
         <h3>Senior judgment. In the room.</h3>
         <p class="tier-tagline">When the decision is too important to make without a strategist at the table.</p>
@@ -94,7 +116,7 @@
           <strong>Best for</strong>
           The moments that define what kind of company you become don't wait for the right hire. Thrive Edge puts VP-level HR expertise in the room for the sessions where it counts most.
         </div>
-        <ul class="tier-includes" style="flex:1;">
+        <ul class="tier-includes">
           <li>Pre-session prep and agenda design</li>
           <li>Live facilitation and real-time advising</li>
           <li>Post-session debrief document with decisions made and actions assigned</li>
@@ -104,24 +126,18 @@
           <strong>Scorecard</strong>
           Session outputs. Decisions made, actions assigned, risks named. A document your leadership team acts on immediately.
         </div>
-        <a href="work-with-us.html" class="btn btn-secondary" style="width:100%; text-align:center; margin-top:auto;">Request an Edge Proposal</a>
+        <div class="tier-cta-wrap">
+          <a href="work-with-us.html" class="btn btn-secondary" style="width:100%; text-align:center;">Request an Edge Proposal</a>
+        </div>
       </div>
 
     </div>
   </div>
 </section>
 
-<section style="background:var(--cream); padding:3.5rem 0;">
-  <div class="container" style="max-width:720px;">
-    <p class="eyebrow">How Every Engagement Ends</p>
-    <h2>Built for your independence. Not your dependency.</h2>
-    <p style="margin:1rem 0 1.5rem;">Thrive is here to build, not to run. Every system comes with a trained internal owner and a metrics dashboard. The goal is always a team that wins without us.</p>
-  </div>
-</section>
-
 <section class="cta-band">
   <div class="container">
-    <h2>Not sure which one fits? Start with the Culture Health Check.</h2>
+    <h2>Not sure which one fits?<br>Start with the Culture Health Check.</h2>
     <p>Five questions. Five minutes. You'll know where the gaps are before we ever speak.</p>
     <div class="cta-band-btns">
       <a href="culture-health-check.html" class="btn btn-primary">Take the Culture Health Check</a>
@@ -130,12 +146,12 @@
   </div>
 </section>
 
-<footer class="footer">
+<footer class="footer" style="border-top: 3px solid var(--gold);">
   <div class="container">
     <div class="footer-grid">
-      <div class="footer-brand">
+      <div class="footer-brand" style="display:flex; flex-direction:column; justify-content:space-between; align-items:flex-start; min-height:200px;">
         <div class="footer-logo"><img src="assets/thrive-logo.png" alt="Thrive People HR"></div>
-        <p>Fractional HR leadership for companies at 30-150 employees. Enterprise-level people strategy, built for your stage, handed over to run without us.</p>
+        <p style="color:rgba(255,255,255,0.85); margin:0; font-size:0.85rem; max-width:28ch;">Fractional HR leadership for growing companies. Enterprise-level people strategy, built for your stage, handed over to run without us.</p>
       </div>
       <div class="footer-col"><h4>Navigate</h4><ul>
         <li><a href="what-we-do.html">Built to Win</a></li>
@@ -146,22 +162,15 @@
       <div class="footer-col"><h4>Resources</h4><ul>
         <li><a href="culture-health-check.html">Culture Health Check</a></li>
         <li><a href="resources.html">Insights &amp; Blog</a></li>
-        <li><a href="work-with-us.html">Work With Us</a></li>
       </ul></div>
       <div class="footer-col"><h4>Connect</h4><ul>
         <li><a href="work-with-us.html">Contact Us</a></li>
         <li><a href="https://linkedin.com/in/damarybrillant" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="culture-health-check.html">Schedule a Call</a></li>
       </ul></div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 Thrive People HR · Imoye Consulting LLC · New York</p>
-      <a href="https://linkedin.com/in/damarybrillant" target="_blank" rel="noopener" class="footer-linkedin">
-        <i class="ti ti-brand-linkedin"></i> LinkedIn
-      </a>
     </div>
   </div>
 </footer>
+
 <script>
   const toggle = document.getElementById('navToggle');
   const links  = document.getElementById('navLinks');
