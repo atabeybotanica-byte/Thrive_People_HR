@@ -115,10 +115,6 @@ p  { color: var(--ink-mid); line-height: 1.75; }
 .tier-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.08); }
 .tier-card.featured { border: 2px solid var(--teal); }
 .tier-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--teal); color: var(--white); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; padding: 3px 12px; border-radius: 12px; text-transform: uppercase; white-space: nowrap; }
-.tier-eyebrow { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.5rem; }
-.tier-eyebrow.clarity { color: #2980B9; }
-.tier-eyebrow.build   { color: #1E8449; }
-.tier-eyebrow.edge    { color: #B7950B; }
 .tier-headline { font-family: var(--font-display); font-size: 1.5rem; color: var(--ink); margin-bottom: 1.5rem; line-height: 1.25; }
 .tier-best-for { font-size: 0.82rem; background: var(--cream); border-radius: 6px; padding: 0.75rem; margin-bottom: 1.25rem; color: var(--ink-mid); }
 .tier-best-for strong { color: var(--ink); display: block; margin-bottom: 0.25rem; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; }
