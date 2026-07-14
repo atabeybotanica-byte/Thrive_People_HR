@@ -32,9 +32,19 @@
     }
     .tier-scorecard {
       margin-top: auto;
+      min-height: 6.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
     .tier-cta-wrap {
       padding-top: 1.5rem;
+    }
+    .tier-cta-wrap a {
+      min-height: 3.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     @media (max-width: 900px) {
       .tiers-grid { grid-template-columns: 1fr; }
@@ -344,7 +354,7 @@ function toggleDetail(btn) {
           Your scouting report becomes the baseline everything gets measured against.
         </div>
         <div class="tier-cta-wrap">
-          <a href="work-with-us.html" class="btn btn-secondary" style="width:100%; text-align:center;">Request a Scouting Report Proposal</a>
+          <a href="work-with-us.html" class="btn btn-secondary" style="width:100%; text-align:center;">Get the Scouting Report</a>
         </div>
       </div>
 
@@ -360,13 +370,13 @@ function toggleDetail(btn) {
           <li>Manager or team training on the system</li>
           <li>90-day post-launch check-in included</li>
         </ul>
-        <p class="tier-timeline"><i class="ti ti-clock" style="vertical-align:-2px;"></i> Timeline: 6-14 weeks depending on scope</p>
+        <p class="tier-timeline"><i class="ti ti-clock" style="vertical-align:-2px;"></i> Timeline: 6-14 weeks</p>
         <div class="tier-scorecard">
           <strong>Scorecard</strong>
           Ninety days later, the results speak instead of the instincts.
         </div>
         <div class="tier-cta-wrap">
-          <a href="work-with-us.html" class="btn btn-primary" style="width:100%; text-align:center;">Request a Game Plan Proposal</a>
+          <a href="work-with-us.html" class="btn btn-primary" style="width:100%; text-align:center;">Get the Game Plan</a>
         </div>
       </div>
 
@@ -387,7 +397,7 @@ function toggleDetail(btn) {
           You leave with a decision made, not a conversation had.
         </div>
         <div class="tier-cta-wrap">
-          <a href="work-with-us.html" class="btn btn-secondary" style="width:100%; text-align:center;">Request a Playoffs Proposal</a>
+          <a href="work-with-us.html" class="btn btn-secondary" style="width:100%; text-align:center;">Get Playoffs Support</a>
         </div>
       </div>
 
